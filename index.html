@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #canvas {
+            border: 1px solid black;
+            background: rgb(37, 182, 37);
+        }
+
+        body {
+            margin: 0;
+            background: rgb(42, 110, 211);
+
+        }
+
+
+
+        .fill {    
+            background-image: url("assets/archer.jpg");
+           
+            height: 25px;
+            width: 25px;
+            
+            cursor: pointer;
+        }
+
+        .hold {
+            border: solid 1px rgb(37, 182, 37);
+        }
+
+
+        .empty {
+            display: inline-block;
+
+            width: 25px;
+            height: 25px;
+            background: rgb(37, 182, 37);
+            margin: -2px;
+        }
+
+
+
+
+        .hovered {
+            background: rgb(15, 102, 15);
+            border-style: dashed;
+        }
+
+        .container {
+            border: solid 1px solid;
+            position:absolute;
+            top: 131px;
+            
+        }
+
+        .ARCHERDIV{
+            position:relative;
+            left: 100px;
+            top: -50px;
+            width: 100px;
+            height: 50px;      
+            padding: 10px;
+        }
+        .archerImage{
+            position: absolute;
+            left: 50px;    
+        }
+
+        .towerPickup{
+            position:absolute;
+            top: 50px;
+            left: 0px;
+            border: solid 1px black;
+            width:  78px;
+            height: 78px;
+            background: gray
+        }
+
+        .towertext{
+            font-size: 10px;
+            text-align: center; 
+
+        }
+        #tt{
+            position:absolute;
+            top:90px;
+            left: 30px;
+            height: 25px;
+            width: 25px;
+        }
+        .na{
+            position:absolute;
+            top:90px;
+            left: 30px;
+            width: 25px;
+            height:25px;
+            border: solid 1px black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <h3>Points: 0
+    </h3>
+        
+    <div class="container">
+        <div class="empty">               
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>   
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>    
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>    
+        <div class="empty"></div>                         
+    </div>
+
+    <div class="towerPickup">
+            <p class="towertext">Click and Drag<br>To place tower</p>
+
+    </div>                 
+    <div class="na" id="tt" dragable="true"></div>
+
+    <div class="ARCHERDIV">
+        <button class="buyA" onclick="aBought()">Buy Archer($500)</button>
+        <img src="assets/archer.jpg" alt="" class="archerImage" draggable="false"> 
+        
+    </div>
+
+
+    <canvas id="canvas"></canvas>
+
+
+    <script src="canvas.js"></script>
+</body>
+
+</html>
